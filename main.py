@@ -12,6 +12,10 @@ import scipy as sp
 
 
 def is_diagonally_dominant(A: np.ndarray | sp.sparse.csc_array) -> bool | None:
+    
+    sum = np.sum(A,1)
+    diagonal = np.diagolnal(A)
+
     """Funkcja sprawdzająca czy podana macierz jest diagonalnie zdominowana.
 
     Args:
