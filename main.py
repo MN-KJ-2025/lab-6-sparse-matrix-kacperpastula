@@ -45,7 +45,7 @@ def residual_norm(A: np.ndarray, x: np.ndarray, b: np.ndarray) -> float | None:
         return None
     if A.shape[0] != b.shape[0] or A.shape[1] != x.shape[0]:
         return None
-    return np.linalg.norm(A @ x - b)
+    return float(np.linalg.norm(b - (A@x)))
 
     """Funkcja obliczająca normę residuum dla równania postaci: 
     Ax = b.
